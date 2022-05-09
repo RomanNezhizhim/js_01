@@ -1,0 +1,1 @@
+let CORRECT_PASSWORD = '1234'
