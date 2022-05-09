@@ -1,4 +1,4 @@
-
+'use strict' // ES2015
 
 // const sideSquare = prompt('sideSquare','10');
 // /**
@@ -86,16 +86,70 @@
 
 
 //**** фибоначчи  ???
-const fibon = function(num=10){
+// const fibon = function(num=10){
 
-  let a = 0;
-  let b = 1;
-  let sum = 0;
+//   let a = 0;
+//   let b = 1;
+//   let sum = 0;
 
-  for(let i=0; i<num; i++){
-    sum += b;
-    b = sum;
-    a = b;
+//   for(let i=0; i<num; i++){
+//     sum += b;
+//     b = sum;
+//     a = b;
+//   }
+//   return sum;
+// }
+
+
+              //^****  обьекты ****^//
+
+// const dog1 ={
+//   name: 'bleck',
+//   isMale:true,
+//   say:function(){
+//     return 'woof'
+//   },
+// }
+// const dog2 ={
+//   name: 'white',
+//   isMale:false,
+//   say:function(){
+//     return 'wooooof'
+//   },
+// }
+
+
+
+//*** функция конструктор обьектов
+
+function User(name = 'Ivan', sname = 'Ivanov', age = 18){
+  this.name = name;
+  this.sname = sname;
+  this.age = age;
+  this.getFullName = function(){
+    return this.name + this.sname
   }
-  return sum;
+};
+
+const user1 = new User('Sofa','Lunina',12);
+const user2 = new User('Roman','Kozak',12);
+const user3 = new User('Kot','Lapkov',12);
+
+
+
+// закрепление конструктора
+
+function Country(name = 'USA', population = 329500000, area = 9834000){
+  this.name = name;
+  this.population = population;
+  this.area = area;
+  this.getDensity = function(){
+    return this.population / this.area
+  }
 }
+const ua = new Country('Ua',44130,603);
+const usa = new Country();
+
+
+
+//
