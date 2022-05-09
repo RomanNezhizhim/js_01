@@ -165,6 +165,7 @@ while(true){
 
   if(enterNumber === '' || enterNumber === null || isNaN(Number(enterNumber))){
     alert('ты ввел не число, попробуй еще');
+    // counter++  предположим ошибка не считается за попытку
     continue
   }
 
@@ -172,7 +173,11 @@ while(true){
     alert('угадал, количество попыток '+ counter);
     break
   }else{
-    alert('мимо');
+    let compas = 'меньше';
+    if(hiddenNumber>enterNumber){
+      compas = 'больше'
+    }
+    alert('мимо, искомое число ' + compas);
     counter++;
   }
 }
