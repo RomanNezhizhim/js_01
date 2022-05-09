@@ -122,34 +122,38 @@
 
 //*** функция конструктор обьектов
 
-function User(name = 'Ivan', sname = 'Ivanov', age = 18){
-  this.name = name;
-  this.sname = sname;
-  this.age = age;
-  this.getFullName = function(){
-    return this.name + this.sname
-  }
-};
+// function User(name = 'Ivan', sname = 'Ivanov', age = 18){
+//   this.name = name;
+//   this.sname = sname;
+//   this.age = age;
+//   this.getFullName = function(){
+//     return this.name + this.sname
+//   }
+// };
 
-const user1 = new User('Sofa','Lunina',12);
-const user2 = new User('Roman','Kozak',12);
-const user3 = new User('Kot','Lapkov',12);
+// const user1 = new User('Sofa','Lunina',12);
+// const user2 = new User('Roman','Kozak',12);
+// const user3 = new User('Kot','Lapkov',12);
 
 
 
 // закрепление конструктора
 
-function Country(name = 'USA', population = 329500000, area = 9834000){
-  this.name = name;
-  this.population = population;
-  this.area = area;
-  this.getDensity = function(){
-    return this.population / this.area
-  }
-}
-const ua = new Country('Ua',44130,603);
-const usa = new Country();
+// function Country(name = 'USA', population = 329500000, area = 9834000){
+//   this.name = name;
+//   this.population = population;
+//   this.area = area;
+//   this.getDensity = function(){
+//     return this.population / this.area
+//   }
+// }
+// const ua = new Country('Ua',44130,603);
+// const usa = new Country();
 
 
 
-//
+//Написать код, который предлагает пользователю угадать "секретное число".
+
+// Секретное число хранится в константе.
+// Пользователь пытается угадать, вы в зависимоти от ответа пользователя даете подсказки: больше или меньше секретное число.
+// После того, как пользователь угадал секретное число, вы выодите ему количество попыток, которые были потрачены на угадывание.
