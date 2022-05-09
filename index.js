@@ -163,8 +163,14 @@ while(true){
 
   let enterNumber = prompt('введи число');
 
-  if(enterNumber===hiddenNumber){
+  if(enterNumber === '' || enterNumber === null || isNaN(Number(enterNumber))){
+    alert('ты ввел не число, попробуй еще');
+    continue
+  }
+
+  if(hiddenNumber===Number(enterNumber)){
     alert('угадал, количество попыток '+ counter);
+    break
   }else{
     alert('мимо');
     counter++;
