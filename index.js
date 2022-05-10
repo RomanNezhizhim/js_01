@@ -250,15 +250,20 @@ const questionUser = function(number1, number2, sign,){
 
     let enterResult = prompt(`введи решение примера ${number1} ${sign} ${number2} = `);
     if(enterResult === ''){
-      counterEnd++
+      counterEnd++;
       if(counterEnd === 3){
+        // alert('отмена через три пустых ввода');
         return false
       }
     }
     
-    if(enterResult === null || isNaN(Number(enterResult))){
+    if(isNaN(Number(enterResult))){
       alert('ты ввел не число, попробуй еще');
       continue
+    }
+    if(enterResult === null){
+      // alert('отмена так отмена');
+      return false
     }
     
     if(result===Number(enterResult)){
