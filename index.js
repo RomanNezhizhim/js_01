@@ -219,32 +219,33 @@
 
 //предвагать решить пример пользователю, пока он его не решит
 
-const trenningMath = function(firstNum = 3, secondNum = 10, sign ='*'){
+
+const calc = function(num1, num2, sign){
   
-  if(isNaN(firstNum*secondNum)){
-    return false
-  }
-
   let result;
-
+  
   switch (sign){
     case '+':
-      result = firstNum + secondNum;
+      result = num1 + num2;
       break;
     case '-':
-      result = firstNum - secondNum;
+      result = num1 - num2;
       break;
     case '*':
-      result = firstNum * secondNum;
+      result = num1 * num2;
       break;
     case '/':
-      result = firstNum / secondNum;
+      result = num1 / num2;
       break;
   }
+  return result
 
-  while(true){
-
-    let enterResult = prompt(`введи решение примера ${firstNum} ${sign} ${secondNum} = `);
+}
+const questionUser = function(number1, number2, sign,){
+  let result = calc(number1, number2, sign);
+    while(true){
+    
+    let enterResult = prompt(`введи решение примера ${number1} ${sign} ${number2} = `);
     let counterEnd = 0
     if(enterResult === ''){
       counterEnd++
@@ -252,15 +253,15 @@ const trenningMath = function(firstNum = 3, secondNum = 10, sign ='*'){
         return false
       }
     }
-
+    
     if(enterResult === '' || enterResult === null || isNaN(Number(enterResult))){
       alert('ты ввел не число, попробуй еще');
-        continue
+      continue
     }
-
+    
     if(result===Number(enterResult)){
       // alert('правильно, ура');
-        counterEnd = 0
+      counterEnd = 0
       return true
     }else{
       // alert('не правильно');
@@ -270,3 +271,33 @@ const trenningMath = function(firstNum = 3, secondNum = 10, sign ='*'){
 
 }
 
+
+const trenningMath = function(number1 = 3, number2 = 10, sign ='*'){
+  
+  if(isNaN(number1*number2)){
+    return false
+  }
+
+  if(questionUser(number1, number2, sign)){
+    alert('правильно, ура');
+  }else{
+    alert('досвидание');
+  }
+
+}
+
+
+
+
+
+//возвращает обьект с таблицей умножения///////
+
+// const createMultTable = function(limit=9){
+//   const table = {};
+//   for(let i=2; i<=limit; i++){
+//     for(let j=2; j<=limit; j++){
+//       table[`${i}*${j}`] = i*j;
+//     }
+//   }
+//   return table;
+// }
