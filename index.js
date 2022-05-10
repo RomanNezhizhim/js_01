@@ -243,10 +243,12 @@ const calc = function(num1, num2, sign){
 }
 const questionUser = function(number1, number2, sign,){
   let result = calc(number1, number2, sign);
+  let counterEnd = 0;
     while(true){
-    
+      
+    // debugger
+
     let enterResult = prompt(`введи решение примера ${number1} ${sign} ${number2} = `);
-    let counterEnd = 0
     if(enterResult === ''){
       counterEnd++
       if(counterEnd === 3){
@@ -254,7 +256,7 @@ const questionUser = function(number1, number2, sign,){
       }
     }
     
-    if(enterResult === '' || enterResult === null || isNaN(Number(enterResult))){
+    if(enterResult === null || isNaN(Number(enterResult))){
       alert('ты ввел не число, попробуй еще');
       continue
     }
@@ -263,15 +265,10 @@ const questionUser = function(number1, number2, sign,){
       // alert('правильно, ура');
       counterEnd = 0
       return true
-    }else{
-      // alert('не правильно');
-      counterEnd = 0
     }
   }
 
 }
-
-
 const trenningMath = function(number1 = 3, number2 = 10, sign ='*'){
   
   if(isNaN(number1*number2)){
@@ -286,6 +283,7 @@ const trenningMath = function(number1 = 3, number2 = 10, sign ='*'){
 
 }
 
+trenningMath();
 
 
 
