@@ -157,27 +157,116 @@
 // Пользователь пытается угадать, вы в зависимоти от ответа пользователя даете подсказки: больше или меньше секретное число.
 // После того, как пользователь угадал секретное число, вы выодите ему количество попыток, которые были потрачены на угадывание.
 
-const hiddenNumber = 23;
-let counter = 1;
-while(true){
+// const hiddenNumber = 23;
+// let counter = 1;
+// while(true){
 
-  let enterNumber = prompt('введи число');
+//   let enterNumber = prompt('введи число');
 
-  if(enterNumber === '' || enterNumber === null || isNaN(Number(enterNumber))){
-    alert('ты ввел не число, попробуй еще');
-    // counter++  предположим ошибка не считается за попытку
-    continue
+//   if(enterNumber === '' || enterNumber === null || isNaN(Number(enterNumber))){
+//     alert('ты ввел не число, попробуй еще');
+//     // counter++  предположим ошибка не считается за попытку
+//     continue
+//   }
+
+//   if(hiddenNumber===Number(enterNumber)){
+//     alert('угадал, количество попыток '+ counter);
+//     break
+//   }else{
+//     let compas = 'меньше';
+//     if(hiddenNumber>enterNumber){
+//       compas = 'больше'
+//     }
+//     alert('мимо, искомое число ' + compas);
+//     counter++;
+//   }
+// }
+
+
+
+//вывод в консоль числа кратного num в заданном диапазоне(вывод в обратном порядке)
+
+// const logRangeNumber = function(start = 20, end = 15, num = 3){
+  // console.log(start);
+
+  // for(let i=start; i>=end; i--){
+  //   if(i%num===0){
+  //     console.log(i);
+  //   }
+
+  // }
+
+//   while(start>=end){
+
+//     if(start%num===0){
+//       console.log(start);
+//     }
+//     start--
+//   }
+// }
+
+// start=12; end=20; num=3;
+
+// for(let i=start; i<=end; i++){
+//   if(i%num===0){
+//     console.log(i);
+//   }
+
+// }
+
+
+
+
+//предвагать решить пример пользователю, пока он его не решит
+
+const trenningMath = function(firstNum = 3, secondNum = 10, sign ='*'){
+  
+  if(isNaN(firstNum*secondNum)){
+    return false
   }
 
-  if(hiddenNumber===Number(enterNumber)){
-    alert('угадал, количество попыток '+ counter);
-    break
-  }else{
-    let compas = 'меньше';
-    if(hiddenNumber>enterNumber){
-      compas = 'больше'
+  let result;
+
+  switch (sign){
+    case '+':
+      result = firstNum + secondNum;
+      break;
+    case '-':
+      result = firstNum - secondNum;
+      break;
+    case '*':
+      result = firstNum * secondNum;
+      break;
+    case '/':
+      result = firstNum / secondNum;
+      break;
+  }
+
+  while(true){
+
+    let enterResult = prompt(`введи решение примера ${firstNum} ${sign} ${secondNum} = `);
+    let counterEnd = 0
+    if(enterResult === ''){
+      counterEnd++
+      if(counterEnd === 3){
+        return false
+      }
     }
-    alert('мимо, искомое число ' + compas);
-    counter++;
+
+    if(enterResult === '' || enterResult === null || isNaN(Number(enterResult))){
+      alert('ты ввел не число, попробуй еще');
+        continue
+    }
+
+    if(result===Number(enterResult)){
+      // alert('правильно, ура');
+        counterEnd = 0
+      return true
+    }else{
+      // alert('не правильно');
+      counterEnd = 0
+    }
   }
+
 }
+
