@@ -243,6 +243,7 @@ const calc = function(num1, num2, sign){
 }
 const questionUser = function(number1, number2, sign,){
   let result = calc(number1, number2, sign);
+
   let counterEnd = 0;
     while(true){
       
@@ -274,18 +275,21 @@ const questionUser = function(number1, number2, sign,){
   }
 
 }
-const trenningMath = function(number1 = 3, number2 = 10, sign ='*'){
+const trenningMath = function(number1 = 3, number2 = 10, sign ='+'){
   
   if(isNaN(number1*number2)){
     return false
   }
 
-  if(questionUser(number1, number2, sign)){
-    alert('правильно, ура');
+  if(sign==='*'||sign==='/'||sign==='+'||sign==='-'){
+    if(questionUser(number1, number2, sign)){
+      alert('правильно, ура');
+    }else{
+      alert('досвидание');
+    }
   }else{
-    alert('досвидание');
+    alert('недопустимый оператор');
   }
-
 }
 
 trenningMath();
