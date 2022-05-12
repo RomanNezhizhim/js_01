@@ -1,4 +1,4 @@
-'use strict' // ES2015
+'use strict'; // ES2015
 
 // const sideSquare = prompt('sideSquare','10');
 // /**
@@ -119,7 +119,7 @@
 
 
 
-//*** функция конструктор обьектов
+//*** функция конструктор обьектов//////////////////////////
 
 // function User(name = 'Ivan', sname = 'Ivanov', age = 18){
 //   this.name = name;
@@ -220,84 +220,84 @@
 //предвагать решить пример пользователю, пока он его не решит
 
 
-const calc = function(num1, num2, sign){
+// const calc = function(num1, num2, sign){
   
-  let result;
+//   let result;
   
-  switch (sign){
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    case '/':
-      result = num1 / num2;
-      break;
-  }
-  return result
+//   switch (sign){
+//     case '+':
+//       result = num1 + num2;
+//       break;
+//     case '-':
+//       result = num1 - num2;
+//       break;
+//     case '*':
+//       result = num1 * num2;
+//       break;
+//     case '/':
+//       result = num1 / num2;
+//       break;
+//   }
+//   return result
 
-}
-const questionUser = function(number1, number2, sign,){
-  let result = calc(number1, number2, sign);
+// }
+// const questionUser = function(number1, number2, sign,){
+//   let result = calc(number1, number2, sign);
 
-  let counterEnd = 0;
-    while(true){
+//   let counterEnd = 0;
+//     while(true){
       
-    // debugger
+//     // debugger
 
-    let enterResult = prompt(`введи решение примера ${number1} ${sign} ${number2} = `);
-    if(enterResult === ''){
-      counterEnd++;
-      if(counterEnd === 3){
-        // alert('отмена через три пустых ввода');
-        return false
-      }
-    }
+//     let enterResult = prompt(`введи решение примера ${number1} ${sign} ${number2} = `);
+//     if(enterResult === ''){
+//       counterEnd++;
+//       if(counterEnd === 3){
+//         // alert('отмена через три пустых ввода');
+//         return false
+//       }
+//     }
     
-    if(isNaN(Number(enterResult))){
-      alert('ты ввел не число, попробуй еще');
-      continue
-    }
-    if(enterResult === null){
-      // alert('отмена так отмена');
-      return false
-    }
+//     if(isNaN(Number(enterResult))){
+//       alert('ты ввел не число, попробуй еще');
+//       continue
+//     }
+//     if(enterResult === null){
+//       // alert('отмена так отмена');
+//       return false
+//     }
     
-    if(result===Number(enterResult)){
-      // alert('правильно, ура');
-      counterEnd = 0
-      return true
-    }
-  }
+//     if(result===Number(enterResult)){
+//       // alert('правильно, ура');
+//       counterEnd = 0
+//       return true
+//     }
+//   }
 
-}
-const trenningMath = function(number1 = 3, number2 = 10, sign ='+'){
+// }
+// const trenningMath = function(number1 = 3, number2 = 10, sign ='+'){
   
-  if(isNaN(number1*number2)){
-    return false
-  }
+//   if(isNaN(number1*number2)){
+//     return false
+//   }
 
-  if(sign==='*'||sign==='/'||sign==='+'||sign==='-'){
-    if(questionUser(number1, number2, sign)){
-      alert('правильно, ура');
-    }else{
-      alert('досвидание');
-    }
-  }else{
-    alert('недопустимый оператор');
-  }
-}
+//   if(sign==='*'||sign==='/'||sign==='+'||sign==='-'){
+//     if(questionUser(number1, number2, sign)){
+//       alert('правильно, ура');
+//     }else{
+//       alert('досвидание');
+//     }
+//   }else{
+//     alert('недопустимый оператор');
+//   }
+// }
 
-trenningMath();
-
-
+// trenningMath();
 
 
-//возвращает обьект с таблицей умножения///////
+
+
+//возвращает обьект с таблицей умножения /вложенный цикл///////
 
 // const createMultTable = function(limit=9){
 //   const table = {};
@@ -308,3 +308,8 @@ trenningMath();
 //   }
 //   return table;
 // }
+
+
+
+
+
