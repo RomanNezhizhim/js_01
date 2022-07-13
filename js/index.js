@@ -16,18 +16,19 @@
 
 
 
-//прмер прототипирования обьектов ----------------
+//прмер прототипирования обьектов ----------------------------------------
+
 // const rabbit = {
-//   countPaw:4,
-//   jump:function(){
+//   countPaw: 4,
+//   jump(){
 //     return 'i\'m jumping'
 //   },
 // }
 
-// const rabbitPet = {
-//   name:'Pulka',
-//   pet:function(){
-//     return `pet ${this.name}`
+// const rabbitPat = {
+//   name:'pizduk',
+//   pat(){
+//     return `name is pat ${this.name}`
 //   },
 // }
 
@@ -37,12 +38,16 @@
 //   },
 // }
 
-// rabbit.__proto__ = rabbitPat;
-// rabbitPat.__proto__ = rabbitMagic;
+// rabbitPat.__proto__ = rabbit;
+// rabbitMagic.__proto__ = rabbitPat;
+// console.log(rabbitMagic.pat())
 
 
 
 
+
+
+//лестницццааа  /////////////////
 
 function Ladder(){
   this.step = 0;
@@ -68,6 +73,12 @@ const rere = new Ladder;
 
 
 rere.up();
-rere.up();
+rere.up().up().up();
 rere.down();
 console.log(rere.showStep());
+
+
+// const name = 'qwerty';
+
+
+

@@ -119,6 +119,9 @@
 
 
 
+
+
+
 //*** функция конструктор обьектов//////////////////////////
 
 // function User(name = 'Ivan', sname = 'Ivanov', age = 18){
@@ -148,6 +151,10 @@
 // }
 // const ua = new Country('Ua',44130,603);
 // const usa = new Country();
+
+
+
+
 
 
 
@@ -184,7 +191,9 @@
 
 
 
-//вывод в консоль числа кратного num в заданном диапазоне(вывод в обратном порядке)
+
+
+//вывод в консоль числа кратного num в заданном диапазоне(вывод в обратном порядке)-----------------
 
 // const logRangeNumber = function(start = 20, end = 15, num = 3){
   // console.log(start);
@@ -217,7 +226,8 @@
 
 
 
-//предвагать решить пример пользователю, пока он его не решит
+
+//предвагать решить пример пользователю, пока он его не решит-----------------------------------
 
 
 // const calc = function(num1, num2, sign){
@@ -266,15 +276,21 @@
 //       // alert('отмена так отмена');
 //       return false
 //     }
-    
 //     if(result===Number(enterResult)){
 //       // alert('правильно, ура');
 //       counterEnd = 0
 //       return true
 //     }
 //   }
-
 // }
+
+// /**
+//  * 
+//  * @param {number} number1 
+//  * @param {number} number2 
+//  * @param {string} sign *|/|+|-
+//  * @returns {boolean}
+//  */
 // const trenningMath = function(number1 = 3, number2 = 10, sign ='+'){
   
 //   if(isNaN(number1*number2)){
@@ -297,7 +313,9 @@
 
 
 
-//возвращает обьект с таблицей умножения /вложенный цикл///////
+
+
+//возвращает обьект с таблицей умножения /вложенный цикл///////------------------------------------
 
 // const createMultTable = function(limit=9){
 //   const table = {};
